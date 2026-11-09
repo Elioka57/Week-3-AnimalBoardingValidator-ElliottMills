@@ -1,5 +1,7 @@
 // Week 3: Animal Boarding Validator
 // Validate animal boarding requests using control structures
+
+// Ask user for basic animal info
 Console.WriteLine("=== Animal Boarding System ===");
 Console.WriteLine("Animal Name?");
 string animalName = Console.ReadLine();
@@ -9,6 +11,7 @@ string animalSize = Console.ReadLine().ToLower();
 Console.WriteLine("Is this animal a carnivore? (yes/no)");
 string answer = Console.ReadLine().ToLower();
 
+// Carnivore?
 bool carnivore = false;
 
 if (answer == "yes")
@@ -29,6 +32,7 @@ int numberBoarding = Convert.ToInt32(Console.ReadLine());
 
 string floorAssignment = "";
 
+// Assigning floors
 switch (animalSize)
 {
     case "large":
@@ -48,6 +52,7 @@ switch (animalSize)
     break;
 }
 
+// Final Check
 bool approved = true;
 string reason = "";
 
@@ -75,6 +80,8 @@ else if (animalSize == "small" && numberBoarding > 50)
     reason = "Maximum 50 small animals allowed. You requested " + numberBoarding;
 }
 
+
+// Final output
 Console.WriteLine(" === Boarding Decision === ");
 Console.WriteLine("Animal: " + animalName);
 
